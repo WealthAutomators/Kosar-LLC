@@ -6,7 +6,7 @@ export const categories: Category[] = [
     slug: "electronics",
     name: "Electronics",
     image: "/categories/electronics.jpg",
-    description: "Smart gadgets, audio gear, and everyday tech essentials.",
+    description: "Smart gadgets, connected home, and everyday tech essentials.",
     productCount: 3,
   },
   {
@@ -14,7 +14,7 @@ export const categories: Category[] = [
     slug: "home-kitchen",
     name: "Home & Kitchen",
     image: "/categories/home-kitchen.jpg",
-    description: "Appliances and tools to make home life easier.",
+    description: "Cookware, appliances, and tools for modern home life.",
     productCount: 3,
   },
   {
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     slug: "bathroom",
     name: "Bathroom",
     image: "/categories/bathroom.jpg",
-    description: "Towels, organizers, and bathroom essentials.",
+    description: "Bath essentials, fixtures, and spa-inspired upgrades.",
     productCount: 2,
   },
   {
@@ -30,7 +30,7 @@ export const categories: Category[] = [
     slug: "educational-toys",
     name: "Educational Toys",
     image: "/categories/educational-toys.jpg",
-    description: "Learning tools that make education fun.",
+    description: "Learning tools that make education engaging and fun.",
     productCount: 2,
   },
   {
@@ -38,7 +38,7 @@ export const categories: Category[] = [
     slug: "pet-supplies",
     name: "Pet Supplies",
     image: "/categories/pet-supplies.jpg",
-    description: "Comfort and care products for your pets.",
+    description: "Comfort and care products for your four-legged family.",
     productCount: 2,
   },
   {
@@ -46,15 +46,15 @@ export const categories: Category[] = [
     slug: "beauty",
     name: "Beauty",
     image: "/categories/beauty.jpg",
-    description: "Skincare, hair care, and personal care favorites.",
+    description: "Skincare, wellness beauty, and self-care favorites.",
     productCount: 2,
   },
   {
     id: "7",
     slug: "sports-outdoors",
-    name: "Sports",
+    name: "Sports & Outdoors",
     image: "/categories/sports-outdoors.jpg",
-    description: "Gear for fitness, yoga, and outdoor activities.",
+    description: "Gear for fitness, camping, and outdoor adventures.",
     productCount: 2,
   },
   {
@@ -62,7 +62,7 @@ export const categories: Category[] = [
     slug: "office-supplies",
     name: "Office",
     image: "/categories/office-supplies.jpg",
-    description: "Desk accessories and workspace essentials.",
+    description: "Workspace organizers and desk essentials.",
     productCount: 2,
   },
   {
@@ -94,9 +94,24 @@ export const categories: Category[] = [
     slug: "health-wellness",
     name: "Health & Wellness",
     image: "/categories/health-wellness.jpg",
-    description: "Products to support your wellness routine.",
+    description: "Products to support your daily wellness routine.",
     productCount: 2,
   },
+];
+
+export const departmentDirectory = [
+  { number: "01", name: "ELECTRONICS", slug: "electronics", image: "/categories/electronics.jpg" },
+  { number: "02", name: "HOME", slug: "home-kitchen", image: "/categories/home-kitchen.jpg" },
+  { number: "03", name: "KITCHEN", slug: "home-kitchen", image: "/hero/stories-kitchen.jpg" },
+  { number: "04", name: "BEAUTY", slug: "beauty", image: "/categories/beauty.jpg" },
+  { number: "05", name: "STYLE", slug: "fashion-accessories", image: "/categories/fashion-accessories.jpg" },
+  { number: "06", name: "WORKSPACE", slug: "office-supplies", image: "/categories/office-supplies.jpg" },
+  { number: "07", name: "FAMILY", slug: "baby-products", image: "/categories/baby-products.jpg" },
+  { number: "08", name: "TRAVEL", slug: "sports-outdoors", image: "/hero/stories-travel.jpg" },
+  { number: "09", name: "OUTDOOR", slug: "sports-outdoors", image: "/categories/sports-outdoors.jpg" },
+  { number: "10", name: "PETS", slug: "pet-supplies", image: "/categories/pet-supplies.jpg" },
+  { number: "11", name: "WELLNESS", slug: "health-wellness", image: "/categories/health-wellness.jpg" },
+  { number: "12", name: "TOYS & GAMES", slug: "toys-games", image: "/categories/toys-games.jpg" },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {

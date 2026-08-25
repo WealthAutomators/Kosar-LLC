@@ -1,5 +1,5 @@
 /**
- * Downloads unique Unsplash images for AAM Partners LLC marketplace.
+ * Downloads unique Unsplash images for KOSAR LLC marketplace.
  * Hero, categories, banners, products (×2), and review photos.
  */
 import fs from "fs";
@@ -228,31 +228,31 @@ const CATEGORY_SLUG_POOL = {
 
 /** Explicit primary image per product slug for visual relevance */
 const PRODUCT_PRIMARY = {
-  "wireless-earbuds": "photo-1590658268037-6bf12165a509",
-  "bluetooth-speaker": "photo-1608043152269-423dbba4e7e1",
-  "smart-power-strip": "photo-1625728744080-077785a06511",
-  "electric-kettle": "photo-1585515320310-259814833e95",
+  "portable-mini-projector": "photo-1593784991095-a205854398ca",
+  "digital-photo-frame": "photo-1618005182384-a83a8bd657f9",
+  "wifi-smart-plug-kit": "photo-1558002032-10980940eb3a4",
+  "cast-iron-skillet": "photo-1585664624472-793c76360666",
   "air-fryer": "photo-1585515680365-986b5a5d267a",
-  "coffee-grinder": "photo-1517668808822-9ebb02f2a0e6",
-  "bath-towel-set": "photo-1584622650111-993a426fbf0a",
-  "shower-caddy-organizer": "photo-1616486338812-3dadae4b4ace",
-  "kids-learning-tablet": "photo-1503454535920-2a2bab2645a2",
-  "stem-robot-kit": "photo-1558068710-1c8e0857584f",
+  "ceramic-pour-over-set": "photo-1495474472283-4d45b947b793",
+  "bamboo-bath-mat": "photo-1620626011764-996317b8d101",
+  "rainfall-shower-head": "photo-1600566753190-17fedebaa088",
+  "magnetic-tile-building-set": "photo-1587654780291-39c9404d746b",
+  "world-geography-puzzle": "photo-1503454535920-2a2bab2645a2",
   "dog-bed": "photo-1583511655852-d21ac8a622af",
-  "pet-food-storage": "photo-1601758228041-f3b2795255f1",
-  "vitamin-c-serum-set": "photo-1620916566561-42b1d7f8d5b3",
-  "hair-care-bundle": "photo-1522335780783-8b0812a2bb33",
+  "automatic-pet-feeder": "photo-1601758228041-f3b2795255f1",
+  "retinol-night-cream": "photo-1620916566561-42b1d7f8d5b3",
+  "jade-roller-skincare-kit": "photo-1612817288484-6f916006177a",
   "yoga-mat": "photo-1592432670736-3299669ea351",
-  "resistance-bands-set": "photo-1571019614242-c5c5dee9f50b",
-  "standing-desk-lamp": "photo-1507003211169-0a1dd7228f2d",
-  "ergonomic-mouse-pad": "photo-1497366216548-37526070297c",
-  "leather-wallet": "photo-1527864550417-8fd665563061",
-  "sunglasses-classic": "photo-1572635196237-14bfbfe68983",
-  "baby-monitor": "photo-1555252337-59f4fe5e5c77",
-  "soft-plush-blanket": "photo-1519689680058-324335c77eba",
-  "building-blocks-set": "photo-1587654780291-39c9404d746b",
-  "board-game-family": "photo-1611892440509-7a25aafad115",
-  "foam-roller": "photo-1601925265168-242426a8c117",
+  "foldable-camping-hammock": "photo-1504280390367-361c6d9d9261",
+  "bamboo-monitor-riser": "photo-1497366216548-37526070297c",
+  "leather-document-tray": "photo-1486312338219-ce68d2c6f44d",
+  "canvas-crossbody-tote": "photo-1548036328-c9fa89d128fa",
+  "merino-wool-scarf": "photo-1520903920245-00c7104d8751",
+  "silicone-baby-feeding-set": "photo-1519689680058-324335c77eba",
+  "nursery-night-light-projector": "photo-1555252337-59f4fe5e5c77",
+  "building-blocks-set": "photo-1566576912321-d58ddd7a6088",
+  "wooden-strategy-game": "photo-1611892440509-7a25aafad115",
+  "weighted-sleep-mask": "photo-1541783245831-57ae100926c6",
   "essential-oil-diffuser": "photo-1608571428392-a4c1a89f9949",
 };
 
@@ -293,9 +293,14 @@ function buildTargets() {
   const products = parseProducts();
   const targets = [];
 
-  targets.push({ file: "hero/hero-1.jpg", width: 2000, photoId: POOLS.hero[0] });
+  targets.push({ file: "hero/hero-1.jpg", width: 2000, photoId: "photo-1618221195710-e982f1f8752b" });
+  targets.push({ file: "hero/stories-everyday.jpg", width: 1400, photoId: "photo-1600585154526-990dced4db0d" });
+  targets.push({ file: "hero/stories-workspace.jpg", width: 1400, photoId: "photo-1497366216548-37526070297c" });
+  targets.push({ file: "hero/stories-weekend.jpg", width: 1200, photoId: "photo-1504280390367-361c6d9d9261" });
+  targets.push({ file: "hero/stories-kitchen.jpg", width: 1200, photoId: "photo-1556911221-bff31c812bea" });
+  targets.push({ file: "hero/stories-travel.jpg", width: 1200, photoId: "photo-1488646953014-85ea44a25862" });
+  targets.push({ file: "hero/edit-lifestyle.jpg", width: 1400, photoId: "photo-1616486327342-c4ada60c33e5" });
   targets.push({ file: "banners/about.jpg", width: 1600, photoId: "photo-1607082348824-0a6f2a591e89" });
-  targets.push({ file: "banners/featured.jpg", width: 1600, photoId: "photo-1616486327342-c4ada60c33e5" });
 
   for (const [slug, photoId] of Object.entries(CATEGORY_IMAGES)) {
     targets.push({ file: `categories/${slug}.jpg`, width: 800, photoId });
@@ -334,7 +339,7 @@ function buildTargets() {
 
 async function download(url) {
   const res = await fetch(url, {
-    headers: { "User-Agent": "AAMPartnersLLC/1.0 (image-setup)" },
+    headers: { "User-Agent": "KosarLLC/1.0 (image-setup)" },
     redirect: "follow",
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);

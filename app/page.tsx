@@ -1,28 +1,28 @@
 import { HeroBanner } from "@/components/homepage/hero-banner";
-import { CategoryCarousel } from "@/components/homepage/category-carousel";
-import { DealsOfTheDay } from "@/components/homepage/deals-of-the-day";
-import { FeaturesRow } from "@/components/homepage/features-row";
-import { FeaturedCollection } from "@/components/homepage/featured-collection";
-import { PromotionalBanner } from "@/components/homepage/promotional-banner";
-import { BestSellers } from "@/components/homepage/best-sellers";
-import { AboutSection } from "@/components/homepage/about-section";
+import { KosarStatement } from "@/components/homepage/kosar-statement";
+import { DepartmentDirectory } from "@/components/homepage/department-directory";
+import { FeaturedStories } from "@/components/homepage/featured-stories";
 import { NewArrivals } from "@/components/homepage/new-arrivals";
+import { KosarEdit } from "@/components/homepage/kosar-edit";
+import { BestSellers } from "@/components/homepage/best-sellers";
+import { RedLabelDeals } from "@/components/homepage/red-label-deals";
 import { CustomerReviews } from "@/components/homepage/customer-reviews";
+import { WhyKosar } from "@/components/homepage/why-kosar";
 import { Newsletter } from "@/components/homepage/newsletter";
 
 export default function HomePage() {
   return (
     <>
       <HeroBanner />
-      <CategoryCarousel />
-      <DealsOfTheDay />
-      <FeaturesRow />
-      <FeaturedCollection />
-      <PromotionalBanner />
-      <BestSellers />
-      <AboutSection />
+      <KosarStatement />
+      <DepartmentDirectory />
+      <FeaturedStories />
       <NewArrivals />
+      <KosarEdit />
+      <BestSellers />
+      <RedLabelDeals />
       <CustomerReviews />
+      <WhyKosar />
       <Newsletter />
     </>
   );

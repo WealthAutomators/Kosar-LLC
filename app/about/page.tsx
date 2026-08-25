@@ -26,16 +26,14 @@ export default function AboutPage() {
           </div>
           <PageSection title="Our Story">
             <p>
-              AAM Partners LLC was founded with a simple mission: make online shopping easier for
-              families by bringing together quality products across every category in one trusted
-              marketplace. From electronics and home essentials to toys, beauty, and pet supplies —
-              we curate products that deliver real value.
+              KOSAR LLC was built on a simple idea: shopping should feel curated, not overwhelming.
+              We bring together useful products, everyday essentials and unexpected discoveries across
+              every department — electronics, home, beauty, style, workspace, family, and more.
             </p>
             <p className="mt-4">
-              Based in Virginia Beach, Virginia, we work with reliable suppliers to offer competitive
-              prices without compromising on quality. Every product in our catalog is selected with
-              care, and our team is dedicated to making your shopping experience smooth from browsing
-              to checkout.
+              Based in Atlanta, Georgia, we work with reliable suppliers to offer smart prices without
+              compromising on quality. Every product earns its place in our catalog, and our team is
+              dedicated to making your experience smooth from browsing to checkout.
             </p>
           </PageSection>
         </div>

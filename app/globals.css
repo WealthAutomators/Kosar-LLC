@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #1f2937;
-  --primary: #7c3aed;
+  --background: #f7f5f1;
+  --foreground: #181818;
+  --primary: #151515;
   --primary-foreground: #ffffff;
-  --accent: #f59e0b;
+  --secondary: #353535;
+  --accent: #b63a32;
   --accent-foreground: #ffffff;
-  --pink: #ec4899;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
-  --border: #e5e7eb;
-  --ring: #7c3aed;
+  --highlight: #c9a66b;
+  --highlight-foreground: #151515;
+  --muted: #edeae4;
+  --muted-foreground: #77736d;
+  --border: #d8d5cf;
+  --ring: #b63a32;
   --card: #ffffff;
-  --radius: 12px;
+  --radius: 4px;
 }
 
 @theme inline {
@@ -21,23 +23,35 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-pink: var(--pink);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
   --color-card: var(--card);
   --font-sans: var(--font-inter);
-  --radius-lg: 12px;
-  --radius-xl: 12px;
+  --font-heading: var(--font-jakarta);
+  --font-display: var(--font-bodoni);
+  --radius-lg: 4px;
+  --radius-xl: 4px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-bodoni), Georgia, "Times New Roman", serif;
+}
+
+.font-heading {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
 }
 
 @keyframes accordion-down {
@@ -56,6 +70,15 @@ body {
 
 .animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
+}
+
+@keyframes hero-zoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom 1.2s ease-out forwards;
 }
 
 .prose-store p + p {

@@ -9,24 +9,24 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
 const DEMO_ORDERS: Record<string, { status: string; date: string; items: string; carrier: string; tracking: string }> = {
-  "OC-100234": {
+  "KS-100234": {
     status: "Delivered",
     date: "June 28, 2026",
-    items: "Luxury Cotton Bath Towel Set × 1",
+    items: "Cast Iron Skillet × 1, Ceramic Pour-Over Set × 1",
     carrier: "UPS",
     tracking: "1Z999AA10123456784",
   },
-  "OC-100567": {
+  "KS-100567": {
     status: "In Transit",
     date: "July 1, 2026",
-    items: "Plush Hooded Bathrobe × 1, Coastal Stripe Beach Towel × 2",
+    items: "Portable Mini Projector × 1, Canvas Crossbody Tote × 1",
     carrier: "USPS",
     tracking: "9400111899562345678901",
   },
-  "OC-100891": {
+  "KS-100891": {
     status: "Processing",
     date: "July 2, 2026",
-    items: "Microfiber Cleaning Cloth Set × 2",
+    items: "Magnetic Tile Building Set × 1",
     carrier: "—",
     tracking: "—",
   },
@@ -61,13 +61,13 @@ export function TrackOrderContent() {
       />
       <Container className="pb-16">
         <div className="mx-auto max-w-lg">
-          <form onSubmit={handleTrack} className="rounded-xl border border-border bg-white p-6 md:p-8">
+          <form onSubmit={handleTrack} className="rounded border border-border bg-card p-6 md:p-8">
             <div className="space-y-4">
               <div>
                 <Label htmlFor="order-number">Order Number</Label>
                 <Input
                   id="order-number"
-                  placeholder="e.g. OC-100234"
+                  placeholder="e.g. KS-100234"
                   value={orderNumber}
                   onChange={(e) => setOrderNumber(e.target.value)}
                   required
@@ -94,7 +94,7 @@ export function TrackOrderContent() {
           </form>
 
           {searched && notFound && (
-            <div className="mt-6 rounded-lg border border-border bg-muted/30 p-6 text-center">
+            <div className="mt-6 rounded border border-border bg-muted/30 p-6 text-center">
               <Package className="mx-auto h-8 w-8 text-muted-foreground" />
               <p className="mt-3 font-medium">Order not found</p>
               <p className="mt-1 text-sm text-muted-foreground">
@@ -104,12 +104,12 @@ export function TrackOrderContent() {
           )}
 
           {result && (
-            <div className="mt-6 rounded-xl border border-border bg-white p-6 md:p-8">
+            <div className="mt-6 rounded border border-border bg-card p-6 md:p-8">
               <div className="flex items-center gap-3">
                 {result.status === "Delivered" ? (
-                  <CheckCircle className="h-6 w-6 text-primary" />
+                  <CheckCircle className="h-6 w-6 text-accent" />
                 ) : (
-                  <Truck className="h-6 w-6 text-primary" />
+                  <Truck className="h-6 w-6 text-accent" />
                 )}
                 <div>
                   <p className="text-lg font-semibold">{result.status}</p>

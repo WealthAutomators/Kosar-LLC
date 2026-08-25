@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 interface CountdownTimerProps {
   endTime: string;
   className?: string;
+  variant?: "light" | "dark";
 }
 
 function pad(n: number) {
@@ -21,7 +22,7 @@ function calculateTimeLeft(endTime: string) {
   };
 }
 
-export function CountdownTimer({ endTime, className }: CountdownTimerProps) {
+export function CountdownTimer({ endTime, className, variant = "light" }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(endTime));
 
   useEffect(() => {
@@ -38,10 +39,22 @@ export function CountdownTimer({ endTime, className }: CountdownTimerProps) {
           { label: "Sec", value: timeLeft.seconds },
         ].map((unit) => (
           <div key={unit.label} className="flex flex-col items-center">
-            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-sm font-semibold text-white">
+            <span
+              className={
+                variant === "dark"
+                  ? "flex h-10 w-10 items-center justify-center bg-accent text-sm font-semibold text-white"
+                  : "flex h-10 w-10 items-center justify-center bg-primary text-sm font-semibold text-white"
+              }
+            >
               {pad(unit.value)}
             </span>
-            <span className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+            <span
+              className={
+                variant === "dark"
+                  ? "mt-1 text-[10px] uppercase tracking-wider text-white/60"
+                  : "mt-1 text-[10px] uppercase tracking-wider text-muted-foreground"
+              }
+            >
               {unit.label}
             </span>
           </div>

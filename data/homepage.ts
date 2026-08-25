@@ -1,143 +1,126 @@
-import {
-  Feature,
-  HeroSlide,
-  PromoBanner,
-} from "@/types";
+import { Feature, HeroSlide } from "@/types";
 
 export const heroSlides: HeroSlide[] = [
   {
     id: "1",
     image: "/hero/hero-1.jpg",
-    headline: "Everything Your Home Needs, All in One Place.",
+    headline: "GOOD THINGS.\nWELL CHOSEN.",
     description:
-      "Shop electronics, home essentials, toys, beauty products, kitchen accessories and more at prices you'll love.",
-    ctaText: "Shop Collection",
+      "Everyday essentials, useful upgrades and unexpected finds, selected for modern living.",
+    ctaText: "SHOP KOSAR",
     ctaLink: "/shop",
-    secondaryCtaText: "Today's Deals",
-    secondaryCtaLink: "/shop?sale=true",
+    secondaryCtaText: "EXPLORE NEW ARRIVALS",
+    secondaryCtaLink: "/new-arrivals",
   },
 ];
 
-export const features: Feature[] = [
+export const featuredStories = [
   {
     id: "1",
-    icon: "truck",
-    title: "Fast Shipping",
-    description: "Free shipping on orders over $75. Delivered in 3–5 business days.",
+    label: "LIFESTYLE",
+    title: "THE EVERYDAY EDIT",
+    description: "Thoughtful essentials for rooms you actually live in — curated for comfort, function, and quiet style.",
+    image: "/hero/stories-everyday.jpg",
+    href: "/shop",
+    aspect: "tall" as const,
   },
   {
     id: "2",
-    icon: "shield",
-    title: "Secure Checkout",
-    description: "Your payment information is protected with industry-standard encryption.",
+    label: "WORKSPACE",
+    title: "WORKSPACE RESET",
+    description: "Clear surfaces, better tools, and pieces that make working from anywhere feel intentional.",
+    image: "/hero/stories-workspace.jpg",
+    href: "/categories/office-supplies",
+    aspect: "wide" as const,
   },
   {
     id: "3",
-    icon: "rotate",
-    title: "Easy Returns",
-    description: "Hassle-free 30-day returns on most items. We make it simple.",
+    label: "WEEKEND",
+    title: "WEEKEND ESSENTIALS",
+    description: "From outdoor gear to kitchen favorites — everything worth packing for a well-spent weekend.",
+    image: "/hero/stories-weekend.jpg",
+    href: "/categories/sports-outdoors",
+    aspect: "square" as const,
+  },
+];
+
+export const whyKosarFeatures: Feature[] = [
+  {
+    id: "1",
+    icon: "curated",
+    title: "Curated Selection",
+    description: "Every product earns its place — no endless aisles of forgettable items.",
+  },
+  {
+    id: "2",
+    icon: "prices",
+    title: "Smart Prices",
+    description: "Quality finds at fair prices, without the markup games.",
+  },
+  {
+    id: "3",
+    icon: "easy",
+    title: "Easy Shopping",
+    description: "Browse, compare, and checkout without the friction.",
   },
   {
     id: "4",
-    icon: "headphones",
-    title: "Customer Support",
-    description: "Our friendly team is available Mon–Fri to help with orders and questions.",
-  },
-  {
-    id: "5",
-    icon: "star",
-    title: "Trusted Quality",
-    description: "Every product is carefully selected for quality, value, and reliability.",
+    icon: "new",
+    title: "Something New, Often",
+    description: "Fresh arrivals and rotating edits keep discovery interesting.",
   },
 ];
 
 export const dealsEndTime = new Date(Date.now() + 1000 * 60 * 60 * 18).toISOString();
 
 export const homepageDealsSlugs = [
-  "wireless-earbuds",
-  "electric-kettle",
+  "portable-mini-projector",
   "air-fryer",
+  "bamboo-bath-mat",
   "dog-bed",
-  "bath-towel-set",
-  "sunglasses-classic",
+  "merino-wool-scarf",
 ] as const;
 
 export const homepageBestsellerSlugs = [
-  "wireless-earbuds",
-  "bluetooth-speaker",
-  "bath-towel-set",
-  "yoga-mat",
-  "kids-learning-tablet",
-  "coffee-grinder",
+  "portable-mini-projector",
+  "cast-iron-skillet",
+  "magnetic-tile-building-set",
   "dog-bed",
-  "electric-kettle",
+  "yoga-mat",
+  "air-fryer",
 ] as const;
 
 export const homepageFeaturedSlugs = [
-  "wireless-earbuds",
-  "electric-kettle",
-  "bath-towel-set",
-  "kids-learning-tablet",
-  "standing-desk-lamp",
-  "air-fryer",
-  "yoga-mat",
-  "dog-bed",
-  "coffee-grinder",
-  "bluetooth-speaker",
+  "portable-mini-projector",
+  "cast-iron-skillet",
+  "ceramic-pour-over-set",
+  "bamboo-monitor-riser",
+  "retinol-night-cream",
+  "wooden-strategy-game",
 ] as const;
 
 export const homepageNewArrivalSlugs = [
-  "stem-robot-kit",
-  "vitamin-c-serum-set",
-  "baby-monitor",
-  "foam-roller",
+  "wifi-smart-plug-kit",
+  "ceramic-pour-over-set",
+  "world-geography-puzzle",
+  "retinol-night-cream",
+  "silicone-baby-feeding-set",
+  "weighted-sleep-mask",
 ] as const;
 
-export const promotionalBanner: PromoBanner = {
-  id: "1",
-  title: "Upgrade Your Everyday Living",
-  description:
-    "Discover premium products for every room in your home, from smart electronics to comfortable essentials, all in one place.",
-  buttonText: "Shop Deals",
-  buttonLink: "/shop?sale=true",
-  image: "/banners/featured.jpg",
-};
+export const kosarEditSlugs = {
+  feature: "portable-mini-projector",
+  lifestyle: "/hero/edit-lifestyle.jpg",
+  medium: ["cast-iron-skillet", "canvas-crossbody-tote"],
+  small: "jade-roller-skincare-kit",
+} as const;
 
-export const aboutSection = {
-  title: "Shopping Made Easy.",
-  description:
-    "AAM Partners LLC brings together quality products across multiple categories, helping families find everything they need in one trusted online marketplace. We focus on affordability, reliability, and a smooth shopping experience from browsing to checkout.",
-  checklist: [
-    "Wide selection across 12+ categories",
-    "Competitive prices on everyday essentials",
-    "Fast, reliable shipping nationwide",
-    "Dedicated customer support team",
-  ],
-  buttonText: "Learn More About Us",
-  buttonLink: "/about",
-  image: "/banners/about.jpg",
-};
-
-export const featuredCollection = {
-  title: "Featured Products",
-  description:
-    "Hand-picked favorites across electronics, home, beauty, and more — everything you need in one marketplace.",
-  bannerImage: "/banners/featured.jpg",
-  categorySlug: "electronics",
-};
-
-export const bestSellerTabs = [
-  { label: "All", slug: "all" },
-  { label: "Electronics", slug: "electronics" },
-  { label: "Home & Kitchen", slug: "home-kitchen" },
-  { label: "Beauty", slug: "beauty" },
-  { label: "Sports", slug: "sports-outdoors" },
-];
+export const redLabelDealSlug = "portable-mini-projector";
 
 export const newsletter = {
-  title: "Get Exclusive Deals Before Everyone Else",
-  description: "Subscribe for discounts, new arrivals, and weekly offers.",
-  placeholder: "Enter your email address",
+  title: "THE GOOD STUFF,\nIN YOUR INBOX.",
+  description: "New arrivals, useful finds and occasional offers. Nothing unnecessary.",
+  placeholder: "Your email address",
   buttonText: "Subscribe",
 };
 
