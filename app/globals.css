@@ -92,3 +92,11 @@ html {
 body {
   overflow-x: hidden;
 }
+
+/* mobile-overflow-guard */
+@layer base {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
